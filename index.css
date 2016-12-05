@@ -36,11 +36,10 @@ body {
     display: inline-block;
 }
 
-.header li.icon {
+.header li.icon,
+.footer li.icon {
     display: none;
 }
-
-.footer li.icon {}
 
 .header li a,
 .footer li a,
@@ -55,34 +54,54 @@ body {
 }
 
 .header li a:hover,
-.footer li a:hover {
+.footer li a:hover,
+.footer li span:hover {
     background-color: #9d35ff;
 }
 
 @media screen and (max-width:860px) {
+
     .header li:not(:first-child) {
         display: none;
     }
+
+    .footer li:not(:first-child) {}
+
+    .header li {}
+
+    .footer li {
+        display: none;
+    }
+
     .header li.icon {
         display: inline-block;
         float: right;
     }
+
+    .footer li.icon {
+        display: inline-block;
+    }
+
     .header.responsive {
         position: relative;
     }
+
     .header.responsive li {
         display: inline;
         float: none;
     }
+
     .header.responsive li.icon {
         position: absolute;
         top: 0px;
         right: 0px;
     }
+
     .header.responsive li a {
         display: block;
         text-align: left;
     }
+
 }
 
 .page {

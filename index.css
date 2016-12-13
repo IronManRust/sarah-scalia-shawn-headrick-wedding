@@ -1,22 +1,32 @@
-body {
+html, body {
+    background-attachment: fixed;
+    background-color: #ffffff;
+    background-image: url('watermark.png');
+    background-position: left top;
+    background-repeat: no-repeat;
+    color: #4d2f3d;
+    font-family: 'Helvetica', 'Arial', sans-serif;
     margin: 0px;
 }
 
 .header,
 .footer {
-    background-color: #7a29c6;
+    background-color: #663e51;
     margin: 0px;
     padding: 0px;
     overflow: hidden;
+    position: fixed;
     list-style-type: none;    
     width: 100%;
+    z-index: 1;
 }
 
-.header {}
+.header {
+    top: 0px;
+}
 
 .footer {
     bottom: 0px;
-    position: absolute;
     text-align: justify;
 }
 
@@ -44,7 +54,7 @@ body {
 .header li a,
 .footer li a,
 .footer li span {
-    color: #f2f2f2;
+    color: #b4a1aa;
     display: inline-block;
     padding: 14px 16px;
     font-size: 17px;
@@ -56,10 +66,10 @@ body {
 .header li a:hover,
 .footer li a:hover,
 .footer li span:hover {
-    background-color: #9d35ff;
+    background-color: #f1eff0;
 }
 
-@media screen and (max-width:860px) {
+@media screen and (max-width:930px) {
 
     .header li:not(:first-child) {
         display: none;
@@ -82,10 +92,6 @@ body {
         display: inline-block;
     }
 
-    .header.responsive {
-        position: relative;
-    }
-
     .header.responsive li {
         display: inline;
         float: none;
@@ -106,8 +112,15 @@ body {
 
 .page {
     display: none;
+    position: relative;
+    top: 16px;
+    bottom: 16px;
+    z-index: 0;
 }
 
 .page h1 {
+    font-family: 'Cookie', sans-serif;
+    font-size: 60px;
+    font-weight: lighter;
     text-align: center;
 }

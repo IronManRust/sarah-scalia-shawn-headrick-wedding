@@ -15,6 +15,9 @@ var showPage = function(name) {
         pages[i].style.display = (pages[i].id === "page-" + name) ? "block" : "none";
     }
 
+    var header = document.getElementById("header");
+    header.className = "header standard";
+
 };
 
 var updateCountdownClock = function() {

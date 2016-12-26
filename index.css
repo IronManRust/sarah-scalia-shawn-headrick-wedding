@@ -107,14 +107,37 @@ html, body {
 .page {
     display: none;
     position: relative;
-    top: 51px;
-    bottom: 51px;
+    padding-top: 51px;
+    padding-bottom: 51px;
     z-index: 0;
+}
+
+.page h1,
+.page h2,
+.page h3 {
+    text-align: center;
 }
 
 .page h1 {
     font-family: 'Cookie', sans-serif;
-    font-size: 60px;
     font-weight: lighter;
-    text-align: center;
+    font-size: 60px;
+}
+
+.page h2 {
+    font-size: 20px;
+}
+
+.page h3 {
+    font-size: 16px;
+}
+
+.page p img {
+    display: block;
+    margin: auto;
+    height: auto;
+    width: 60vw;
+    max-height: auto;
+    max-width: 400px;
+    padding-bottom: 50px;
 }

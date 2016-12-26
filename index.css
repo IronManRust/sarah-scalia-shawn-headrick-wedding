@@ -63,12 +63,6 @@ html, body {
     transition: 0.3s;
 }
 
-.header li a:hover,
-.footer li a:hover,
-.footer li span:hover {
-    background-color: #f1eff0;
-}
-
 @media screen and (max-width:930px) {
 
     .header li:not(:first-child) {
@@ -113,8 +107,8 @@ html, body {
 .page {
     display: none;
     position: relative;
-    top: 16px;
-    bottom: 16px;
+    top: 51px;
+    bottom: 51px;
     z-index: 0;
 }
 

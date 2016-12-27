@@ -6,6 +6,8 @@ document.addEventListener("DOMContentLoaded", function(event) {
         updateCountdownClock();
     }, 1000);
 
+    initializePhotoViewer();
+
 });
 
 var showPage = function(name) {
@@ -56,6 +58,56 @@ var updateCountdownClock = function() {
     document.getElementById("countdown-clock-responsive").innerHTML = display;
 
 };
+
+var initializePhotoViewer = function () {
+
+    var viewer = new Viewer(document.getElementById("page-photos-images"),
+                            {
+                                inline: false,
+                                button: true,
+                                navbar: true,
+                                title: true,
+                                toolbar: true,
+                                tooltip: true,
+                                movable: false,
+                                zoomable: true,
+                                rotatable: true,
+                                scalable: true,
+                                transition: true,
+                                fullscreen: false,
+                                keyboard: true,
+                                interval: 5000,
+                                minHeight: 0,
+                                minWidth: 0,
+                                zoomRatio: 0.1,
+                                minZoomRatio: 0.01,
+                                mazZoomRatio: 100,
+                                zIndex: 2,
+                                url: "src",
+                                show: function () {
+                                    toggleNavigationDisplayForViewer(false);
+                                },
+                                hide: function () {
+                                    toggleNavigationDisplayForViewer(true);
+                                }
+                            });
+
+}
+
+var toggleNavigationDisplayForViewer = function (display) {
+
+    var headerWrapper = document.getElementById("wrapper-header");
+    var footerWrapper = document.getElementById("wrapper-footer");
+
+    if (display) {
+        headerWrapper.style = "";
+        footerWrapper.style = "";
+    } else {
+        headerWrapper.style = "display: none;";
+        footerWrapper.style = "display: none;";
+    }
+
+}
 
 var responsiveHeader = function() {
 

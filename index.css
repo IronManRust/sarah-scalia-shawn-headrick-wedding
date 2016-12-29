@@ -1,3 +1,5 @@
+/* General */
+
 html, body {
     background-attachment: fixed;
     background-color: #ffffff;
@@ -8,6 +10,8 @@ html, body {
     font-family: 'Helvetica', 'Arial', sans-serif;
     margin: 0px;
 }
+
+/* Header / Footer */
 
 .header,
 .footer {
@@ -104,6 +108,8 @@ html, body {
 
 }
 
+/* Pages */
+
 .page {
     display: none;
     position: relative;
@@ -132,15 +138,19 @@ html, body {
     font-size: 16px;
 }
 
-.page p img {
+/* Page - Welcome */
+
+#page-welcome p img {
     display: block;
     margin: auto;
     height: auto;
-    width: 60vw;
+    width: 95vw;
     max-height: auto;
-    max-width: 400px;
+    max-width: 850px;
     padding-bottom: 50px;
 }
+
+/* Page - Photos */
 
 @media screen and (min-width:320px){
     #page-photos-images {
@@ -202,7 +212,20 @@ html, body {
 }
 
 #page-photos-images li img {
+    cursor: pointer;
     margin: auto;
     height: auto;
     width: 200px;
+}
+
+/* Page - Party */
+
+#page-party p img {
+    display: block;
+    margin: auto;
+    height: auto;
+    width: 60vw;
+    max-height: auto;
+    max-width: 400px;
+    padding-bottom: 50px;
 }

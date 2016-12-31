@@ -11,6 +11,24 @@ html, body {
     margin: 0px;
 }
 
+/* Splash */
+
+#spinner {
+    background: url('spinner.gif') no-repeat scroll center center #fff;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    opacity: 1;
+    transition: opacity 1s;
+    -moz-transition: opacity 1s;
+    -webkit-transition: opacity 1s;
+    z-index: 2;
+}
+
+#spinner.faded {
+    opacity: 0;
+}
+
 /* Header / Footer */
 
 .header,

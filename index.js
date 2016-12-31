@@ -10,6 +10,16 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
 });
 
+window.addEventListener("load", function load(event) {
+
+    window.removeEventListener("load", load, false);
+
+    window.setTimeout(function() {
+        document.getElementById("spinner").className += "faded";
+    }, 2000);
+
+});
+
 var showPage = function(name) {
 
     var pages = document.getElementsByClassName("page");

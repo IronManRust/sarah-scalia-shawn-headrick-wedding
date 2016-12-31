@@ -14,9 +14,13 @@ window.addEventListener("load", function load(event) {
 
     window.removeEventListener("load", load, false);
 
+    var spinner = document.getElementById("spinner");
     window.setTimeout(function() {
-        document.getElementById("spinner").className += "faded";
-    }, 2000);
+        spinner.className += "faded";
+        window.setTimeout(function() {
+            spinner.className += "faded hidden";
+        }, 1000);
+    }, 1000);
 
 });
 

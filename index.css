@@ -27,7 +27,14 @@ html, body {
 
 #spinner.faded {
     opacity: 0;
-    z-index: -1;
+}
+
+#spinner.hidden {
+    display: none;
+}
+
+#spinner h1 {
+    text-align: center;
 }
 
 /* Header / Footer */

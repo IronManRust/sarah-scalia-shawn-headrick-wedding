@@ -10,9 +10,9 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
 });
 
-window.addEventListener("load", function load(event) {
+window.addEventListener("load", function execute(event) {
 
-    window.removeEventListener("load", load, false);
+    window.removeEventListener("load", execute, false);
 
     var spinner = document.getElementById("spinner");
     window.setTimeout(function() {
@@ -33,6 +33,24 @@ var showPage = function(name) {
 
     var header = document.getElementById("header");
     header.className = "header standard";
+
+};
+
+var showModal = function(name) {
+
+    var modal = document.getElementById(name);
+    if (modal) {
+        var close = modal.getElementsByClassName("modal-content-header-close")[0];
+        if (close) {
+            toggleNavigationDisplay(false);
+            modal.style.display = "block";
+            close.addEventListener("click", function execute(event) {
+                toggleNavigationDisplay(true);
+                modal.style.display = "none";
+                close.removeEventListener("click", execute, false);
+            });
+        }
+    }
 
 };
 
@@ -99,16 +117,16 @@ var initializePhotoViewer = function () {
                                 zIndex: 2,
                                 url: "src",
                                 show: function () {
-                                    toggleNavigationDisplayForViewer(false);
+                                    toggleNavigationDisplay(false);
                                 },
                                 hide: function () {
-                                    toggleNavigationDisplayForViewer(true);
+                                    toggleNavigationDisplay(true);
                                 }
                             });
 
 }
 
-var toggleNavigationDisplayForViewer = function (display) {
+var toggleNavigationDisplay = function (display) {
 
     var headerWrapper = document.getElementById("wrapper-header");
     var footerWrapper = document.getElementById("wrapper-footer");

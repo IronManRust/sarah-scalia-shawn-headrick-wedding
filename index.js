@@ -44,6 +44,14 @@ var showModal = function(name) {
         if (close) {
             toggleNavigationDisplay(false);
             modal.style.display = "block";
+            var frames = modal.getElementsByTagName("iframe");
+            if (frames) {
+                for (frame in frames) {
+                    if (frame) {
+                        frame.src += ""; // Reload Frame
+                    }
+                }
+            }
             close.addEventListener("click", function execute(event) {
                 toggleNavigationDisplay(true);
                 modal.style.display = "none";

@@ -24,6 +24,7 @@
             <li class="item"><a href="#" title="Wedding Day" alt="Wedding Day" onclick="showPage('wedding')">Wedding Day</a></li>
             <li class="item"><a href="#" title="Accommodations & Activities" alt="Accommodations & Activities" onclick="showPage('guests')">Accommodations & Activities</a></li>
             <li class="item"><a href="#" title="Registry" alt="Registry" onclick="showPage('registry')">Registry</a></li>
+            <li class="item"><a href="#" title="Guestbook" alt="Guestbook" onclick="showPage('guestbook')">Guestbook</a></li>
             <li class="icon"><a href="#" title="Menu" alt="Menu" onclick="responsiveHeader()">&#9776;</a></li>
         </ul>
     </div>
@@ -121,6 +122,24 @@
         </div>
         <div class="page" id="page-registry">
             <h1>Registry</h1>
+        </div>
+        <div class="page" id="page-guestbook">
+            <h1>Guestbook</h1>
+            <div id="page-guestbook-disqus">
+                <div id="disqus_thread"></div>
+                <script>
+                    var disqus_config = function () {
+                        this.page.url = "https://ironmanrust.github.io/sarah-scalia-shawn-headrick-wedding/index.html";
+                    };
+                    (function() {
+                        var d = document, s = d.createElement("script");
+                        s.src = "https://sarah-scalia-shawn-headrick-wedding.disqus.com/embed.js";
+                        s.setAttribute("data-timestamp", +new Date());
+                        (d.head || d.body).appendChild(s);
+                    })();
+                </script>
+                <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+            </div>
         </div>
     </div>
     <div class="wrapper" id="wrapper-footer">

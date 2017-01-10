@@ -19,7 +19,7 @@ a {
 
 #spinner {
     background: url('spinner.gif') no-repeat scroll center center #fff;
-    position: absolute;
+    position: fixed;
     height: 100%;
     width: 100%;
     opacity: 1;
@@ -96,7 +96,7 @@ a {
     transition: 0.3s;
 }
 
-@media screen and (max-width:930px) {
+@media screen and (max-width:1024px) {
 
     .header li:not(:first-child) {
         display: none;
@@ -249,7 +249,6 @@ a {
     width: 95vw;
     max-height: auto;
     max-width: 850px;
-    padding-bottom: 50px;
 }
 
 /* Page - Story */
@@ -331,7 +330,6 @@ a {
     width: 60vw;
     max-height: auto;
     max-width: 400px;
-    padding-bottom: 50px;
 }
 
 /* Page - Wedding */
@@ -361,3 +359,13 @@ a {
 /* Page - Guests */
 
 /* Page - Registry */
+
+/* Page - Guestbook */
+
+#page-guestbook-disqus {
+    margin: auto;
+    height: auto;
+    width: 95vw;
+    max-height: auto;
+    max-width: 850px;
+}

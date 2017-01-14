@@ -46,11 +46,15 @@ var showModal = function(name) {
             modal.style.display = "block";
             var frame = modal.getElementsByTagName("iframe")[0]
             if (frame) {
-                frame.src += ""; // Reload Frame
+                frame.src = frame.getAttribute("data-src"); // Load Content
             }
             close.addEventListener("click", function execute(event) {
                 toggleNavigationDisplay(true);
                 modal.style.display = "none";
+                var frame = modal.getElementsByTagName("iframe")[0]
+                if (frame) {
+                    frame.src = ""; // Unload Content
+                }
                 close.removeEventListener("click", execute, false);
             });
         }

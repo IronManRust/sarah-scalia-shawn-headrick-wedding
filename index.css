@@ -96,7 +96,7 @@ a {
     transition: 0.3s;
 }
 
-@media screen and (max-width:1024px) {
+@media screen and (max-width:1023px) {
 
     .header li:not(:first-child) {
         display: none;
@@ -246,7 +246,7 @@ a {
     display: block;
     margin: auto;
     height: auto;
-    width: 95vw;
+    width: 50vw;
     max-height: auto;
     max-width: 850px;
 }

@@ -240,15 +240,34 @@ a {
     font-size: 16px;
 }
 
+.page p span.text {
+    display: inline-block;
+    font-size: 16px;
+    text-align: justify;
+    margin-left: 5vw;
+    margin-right: 5vw;
+    height: auto;
+    width: auto;
+}
+
 /* Page - Welcome */
 
-#page-welcome p img {
+#page-welcome-hero,
+#page-welcome-signatures {
     display: block;
     margin: auto;
     height: auto;
-    width: 50vw;
-    max-height: auto;
-    max-width: 850px;
+    width: auto;
+}
+
+#page-welcome-hero {
+    max-height: 50vh;
+    max-width: 95vw;
+}
+
+#page-welcome-signatures {
+    max-height: 10vh;
+    max-width: 95vw;
 }
 
 /* Page - Story */

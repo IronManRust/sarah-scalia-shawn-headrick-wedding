@@ -364,13 +364,21 @@ a {
 
 /* Page - Party */
 
-#page-party p img {
+.page-party-row {
+    text-align: center;
+    padding: 5px;
+}
+
+.page-party-member {
+    display: inline-block;
+    padding: 5px;
+}
+
+.page-party-member p img {
     display: block;
     margin: auto;
-    height: auto;
-    width: 60vw;
-    max-height: auto;
-    max-width: 400px;
+    width: auto;
+    max-width: 250px;
 }
 
 /* Page - Wedding */

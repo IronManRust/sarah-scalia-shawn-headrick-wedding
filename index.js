@@ -64,7 +64,7 @@ var showModal = function(name) {
 
 var updateCountdownClock = function() {
 
-    var dateWedding = Date.parse("September 2, 2017");
+    var dateWedding = Date.parse("September 2, 2017 12:00:00 CDT");
     var dateCurrent = Date.now();
     var dateDifference = dateWedding - dateCurrent;
 

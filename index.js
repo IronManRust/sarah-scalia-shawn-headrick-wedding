@@ -132,7 +132,7 @@ var initializePhotoViewer = function () {
                                 }
                             });
 
-}
+};
 
 var toggleNavigationDisplay = function (display) {
 
@@ -147,7 +147,7 @@ var toggleNavigationDisplay = function (display) {
         footerWrapper.style = "display: none;";
     }
 
-}
+};
 
 var responsiveHeader = function() {
 

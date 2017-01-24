@@ -175,11 +175,20 @@ a {
 
 .modal-content {
     background-color: #ffffff;
-    margin: 2%;
+    margin: 2% auto;
     padding: 4%;
     border: 1px solid #000000;
     border-radius: 5px;
+    max-height: auto;
+    max-width: 640px;
     z-index: 3;
+}
+
+@media screen and (max-width:720px) {
+    .modal-content {
+        max-height: auto;
+        max-width: 88vw;
+    }
 }
 
 .modal-content-header,

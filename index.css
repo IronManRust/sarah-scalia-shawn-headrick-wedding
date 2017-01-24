@@ -223,6 +223,12 @@ a {
     bottom: 0px;
 }
 
+.modal-content-body-caption {
+    text-align: center;
+    line-height: 10px;
+    margin-bottom: 25px;
+}
+
 /* IFrames */
 
 .iframe-container {
@@ -431,9 +437,8 @@ a {
 /* Page - Contact */
 
 #page-contact-disqus {
-    margin: auto;
+    margin-left: 5vw;
+    margin-right: 5vw;
     height: auto;
-    width: 95vw;
-    max-height: auto;
-    max-width: 850px;
+    width: 90vw;
 }

@@ -126,9 +126,11 @@ var initializePhotoViewer = function () {
                                 url: "src",
                                 show: function () {
                                     toggleNavigationDisplay(false);
+                                    togglePhotoListDisplay(false);
                                 },
                                 hide: function () {
                                     toggleNavigationDisplay(true);
+                                    togglePhotoListDisplay(true);
                                 }
                             });
 
@@ -140,11 +142,23 @@ var toggleNavigationDisplay = function (display) {
     var footerWrapper = document.getElementById("wrapper-footer");
 
     if (display) {
-        headerWrapper.style = "";
-        footerWrapper.style = "";
+        headerWrapper.style.display = "";
+        footerWrapper.style.display = "";
     } else {
-        headerWrapper.style = "display: none;";
-        footerWrapper.style = "display: none;";
+        headerWrapper.style.display = "none";
+        footerWrapper.style.display = "none";
+    }
+
+};
+
+var togglePhotoListDisplay = function (display) {
+
+    var photoList = document.getElementById("page-photos-images");
+
+    if (display) {
+        photoList.style.display = "";
+    } else {
+        photoList.style.display = "none";
     }
 
 };

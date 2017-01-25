@@ -430,6 +430,36 @@ a {
     text-align: right;
 }
 
+@media screen and (max-width: 480px) {
+
+    #page-wedding table thead,
+    #page-wedding table thead tr,
+    #page-wedding table thead tr th {
+        display: none;
+    }
+
+    #page-wedding table tbody,
+    #page-wedding table tbody tr,
+    #page-wedding table tbody tr td {
+        display: block;
+    }
+
+    #page-wedding table tbody tr {
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
+
+    #page-wedding table tbody tr td {
+        position: relative;
+    }
+
+    #page-wedding table tbody tr td.cell-left,
+    #page-wedding table tbody tr td.cell-right {
+        text-align: left;
+    }
+
+}
+
 /* Page - Guests */
 
 /* Page - Registry */

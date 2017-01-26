@@ -8,7 +8,6 @@ html, body {
 }
 
 a {
-    color: #0000ff;
     text-decoration: none;
 }
 
@@ -168,6 +167,15 @@ a {
 
 /* Modals */
 
+.modal-link {
+    color: #4d2f3d;
+    font-weight: bold;
+}
+
+.modal-link:hover {
+    text-decoration: underline;
+}
+
 .modal {
     display: none;
     position: fixed;
@@ -296,12 +304,24 @@ a {
 
 .page p span.text {
     display: inline-block;
-    font-size: 16px;
+    font-size: 17px;
     text-align: justify;
-    margin-left: 5vw;
-    margin-right: 5vw;
+    margin-left: 15vw;
+    margin-right: 15vw;
     height: auto;
     width: auto;
+}
+
+@media screen and (max-width:880px) {
+    .page p span.text {
+        display: inline-block;
+        font-size: 17px;
+        text-align: justify;
+        margin-left: 5vw;
+        margin-right: 5vw;
+        height: auto;
+        width: auto;
+    }
 }
 
 /* Page - Welcome */
@@ -328,7 +348,7 @@ a {
 
 /* Page - Photos */
 
-@media screen and (min-width:320px){
+@media screen and (min-width:320px) {
     #page-photos-images {
         text-align: center;
         column-gap: 2px;
@@ -339,7 +359,7 @@ a {
     }
 }
 
-@media screen and (min-width:480px){
+@media screen and (min-width:480px) {
     #page-photos-images {
         text-align: center;
         column-gap: 2px;
@@ -350,7 +370,7 @@ a {
     }
 }
 
-@media screen and (min-width:640px){
+@media screen and (min-width:640px) {
     #page-photos-images {
         text-align: center;
         column-gap: 2px;
@@ -361,7 +381,7 @@ a {
     }
 }
 
-@media screen and (min-width:960px){
+@media screen and (min-width:960px) {
     #page-photos-images {
         text-align: center;
         column-gap: 2px;
@@ -372,7 +392,7 @@ a {
     }
 }
 
-@media screen and (min-width:1080px){
+@media screen and (min-width:1080px) {
     #page-photos-images {
         text-align: center;
         column-gap: 2px;
@@ -474,8 +494,17 @@ a {
 /* Page - Contact */
 
 #page-contact-disqus {
-    margin-left: 5vw;
-    margin-right: 5vw;
+    margin-left: 15vw;
+    margin-right: 15vw;
     height: auto;
-    width: 90vw;
+    width: auto;
+}
+
+@media screen and (max-width:880px) {
+    #page-contact-disqus {
+        margin-left: 5vw;
+        margin-right: 5vw;
+        height: auto;
+        width: auto;
+    }
 }

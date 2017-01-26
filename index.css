@@ -1,11 +1,7 @@
 /* General */
 
 html, body {
-    background-attachment: fixed;
     background-color: #ffffff;
-    background-image: url('watermark.png');
-    background-position: left top;
-    background-repeat: no-repeat;
     color: #4d2f3d;
     font-family: 'Helvetica', 'Arial', sans-serif;
     margin: 0px;
@@ -42,22 +38,32 @@ a {
     text-align: center;
 }
 
-/* Responsive Watermark */
+/* Watermark */
 
-#responsive-watermark {
+#watermark-standard,
+#watermark-responsive {
     position: fixed;
+    opacity: 0.8;
+}
+
+#watermark-standard {
+    left: 0px;
+    top: 0px;
+}
+
+#watermark-responsive {
     right: 0px;
     bottom: 0px;
 }
 
-#responsive-watermark img {
+#watermark-responsive img {
     transform: rotate(180deg);
     -moz-transform: rotate(180deg);
     -webkit-transform: rotate(180deg);
 }
 
 @media screen and (max-width:880px) {
-    #responsive-watermark {
+    #watermark-responsive {
         display: none;
     }
 }

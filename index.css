@@ -14,14 +14,18 @@ a {
 /* Splash */
 
 #spinner {
+    display: block;
     background: url('spinner.gif') no-repeat scroll center center #fff;
     position: fixed;
+    top: 0px;
+    left: 0px;
     height: 100%;
     width: 100%;
+    overflow: auto;
     opacity: 1;
-    transition: opacity 1s;
-    -moz-transition: opacity 1s;
-    -webkit-transition: opacity 1s;
+    transition: opacity 1s linear;
+    -moz-transition: opacity 1s linear;
+    -webkit-transition: opacity 1s linear;
     z-index: 2;
 }
 
@@ -119,9 +123,6 @@ a {
     padding: 14px 16px;
     font-size: 17px;
     text-align: center;
-    transition: 0.3s;
-    -moz-transition: 0.3s;
-    -webkit-transition: 0.3s;
 }
 
 @media screen and (max-width:1023px) {
@@ -177,15 +178,27 @@ a {
 }
 
 .modal {
-    display: none;
-    position: fixed;
+    display: block;
     background-color: rgba(0,0,0,0.5);
+    position: fixed;
     top: 0px;
     left: 0px;
     height: 100%;
     width: 100%;
     overflow: auto;
+    opacity: 1;
+    transition: opacity 0.5s linear;
+    -moz-transition: opacity 0.5s linear;
+    -webkit-transition: opacity 0.5s linear;
     z-index: 2;
+}
+
+.modal-faded {
+    opacity: 0;
+}
+
+.modal-hidden {
+    display: none;
 }
 
 .modal-content {

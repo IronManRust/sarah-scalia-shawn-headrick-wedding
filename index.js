@@ -16,9 +16,9 @@ window.addEventListener("load", function execute(event) {
 
     var spinner = document.getElementById("spinner");
     window.setTimeout(function() {
-        spinner.className += "faded";
+        spinner.className = "faded";
         window.setTimeout(function() {
-            spinner.className += "faded hidden";
+            spinner.className = "faded hidden";
         }, 1000);
     }, 1000);
 
@@ -43,18 +43,24 @@ var showModal = function(name) {
         var close = modal.getElementsByClassName("modal-content-header-close")[0];
         if (close) {
             toggleNavigationDisplay(false);
-            modal.style.display = "block";
-            var frame = modal.getElementsByTagName("iframe")[0]
-            if (frame) {
-                frame.src = frame.getAttribute("data-src"); // Load Content
-            }
-            close.addEventListener("click", function execute(event) {
-                toggleNavigationDisplay(true);
-                modal.style.display = "none";
+            modal.className = "modal modal-faded";
+            window.setTimeout(function () {
+                modal.className = "modal";
                 var frame = modal.getElementsByTagName("iframe")[0]
                 if (frame) {
-                    frame.src = ""; // Unload Content
+                    frame.src = frame.getAttribute("data-src"); // Load Content
                 }
+            }, 500);
+            close.addEventListener("click", function execute(event) {
+                modal.className = "modal modal-faded";
+                window.setTimeout(function () {
+                    modal.className = "modal modal-faded modal-hidden";
+                    toggleNavigationDisplay(true);
+                    var frame = modal.getElementsByTagName("iframe")[0]
+                    if (frame) {
+                        frame.src = ""; // Unload Content
+                    }
+                }, 500);
                 close.removeEventListener("click", execute, false);
             });
         }

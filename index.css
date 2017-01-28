@@ -192,7 +192,11 @@ a {
     }
 
     .header li a:hover,
-    .footer li a:hover {
+    .header li a:focus,
+    .header li a:active,
+    .footer li a:hover,
+    .footer li a:focus,
+    .footer li a:active {
         background-color: #663e51;
     }
 

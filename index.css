@@ -75,6 +75,7 @@ a {
 
 .header,
 .footer {
+    display: block;
     background-color: #663e51;
     margin: 0px;
     padding: 0px;
@@ -82,6 +83,10 @@ a {
     position: fixed;
     list-style-type: none;    
     width: 100%;
+    opacity: 1;
+    transition: opacity 0.3s linear;
+    -moz-transition: opacity 0.3s linear;
+    -webkit-transition: opacity 0.3s linear;
     z-index: 1;
 }
 
@@ -92,6 +97,14 @@ a {
 .footer {
     bottom: 0px;
     text-align: justify;
+}
+
+.navigation-faded {
+    opacity: 0;
+}
+
+.navigation-hidden {
+    display: none;
 }
 
 .header:after {}
@@ -187,9 +200,9 @@ a {
     width: 100%;
     overflow: auto;
     opacity: 1;
-    transition: opacity 0.5s linear;
-    -moz-transition: opacity 0.5s linear;
-    -webkit-transition: opacity 0.5s linear;
+    transition: opacity 0.3s linear;
+    -moz-transition: opacity 0.3s linear;
+    -webkit-transition: opacity 0.3s linear;
     z-index: 2;
 }
 

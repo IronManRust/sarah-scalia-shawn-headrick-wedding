@@ -16,9 +16,9 @@ window.addEventListener("load", function execute(event) {
 
     var spinner = document.getElementById("spinner");
     window.setTimeout(function() {
-        spinner.className = "faded";
+        spinner.classList.add("faded");
         window.setTimeout(function() {
-            spinner.className = "faded hidden";
+            spinner.classList.add("hidden");
         }, 1000);
     }, 1000);
 
@@ -32,7 +32,8 @@ var showPage = function(name) {
     }
 
     var header = document.getElementById("header");
-    header.className = "header standard";
+    header.classList.add("standard");
+    header.classList.remove("responsive");
 
 };
 
@@ -43,24 +44,24 @@ var showModal = function(name) {
         var close = modal.getElementsByClassName("modal-content-header-close")[0];
         if (close) {
             toggleNavigationDisplay(false);
-            modal.className = "modal modal-faded";
+            modal.classList.remove("modal-hidden");
             window.setTimeout(function () {
-                modal.className = "modal";
+                modal.classList.remove("modal-faded");
                 var frame = modal.getElementsByTagName("iframe")[0]
                 if (frame) {
                     frame.src = frame.getAttribute("data-src"); // Load Content
                 }
-            }, 500);
+            }, 300);
             close.addEventListener("click", function execute(event) {
-                modal.className = "modal modal-faded";
+                modal.classList.add("modal-faded");
                 window.setTimeout(function () {
-                    modal.className = "modal modal-faded modal-hidden";
+                    modal.classList.add("modal-hidden");
                     toggleNavigationDisplay(true);
                     var frame = modal.getElementsByTagName("iframe")[0]
                     if (frame) {
                         frame.src = ""; // Unload Content
                     }
-                }, 500);
+                }, 300);
                 close.removeEventListener("click", execute, false);
             });
         }
@@ -144,15 +145,23 @@ var initializePhotoViewer = function () {
 
 var toggleNavigationDisplay = function (display) {
 
-    var headerWrapper = document.getElementById("wrapper-header");
-    var footerWrapper = document.getElementById("wrapper-footer");
+    var header = document.getElementById("header");
+    var footer = document.getElementById("footer");
 
     if (display) {
-        headerWrapper.style.display = "";
-        footerWrapper.style.display = "";
+        header.classList.remove("navigation-hidden");
+        footer.classList.remove("navigation-hidden");
+        window.setTimeout(function () {
+            header.classList.remove("navigation-faded");
+            footer.classList.remove("navigation-faded");
+        }, 300);
     } else {
-        headerWrapper.style.display = "none";
-        footerWrapper.style.display = "none";
+        header.classList.add("navigation-faded");
+        footer.classList.add("navigation-faded");
+        window.setTimeout(function () {
+            header.classList.add("navigation-hidden");
+            footer.classList.add("navigation-hidden");
+        }, 300);
     }
 
 };
@@ -160,22 +169,14 @@ var toggleNavigationDisplay = function (display) {
 var togglePhotoListDisplay = function (display) {
 
     var photoList = document.getElementById("page-photos-images");
-
-    if (display) {
-        photoList.style.display = "";
-    } else {
-        photoList.style.display = "none";
-    }
+    photoList.style.display = display ? "block" : "none";
 
 };
 
 var responsiveHeader = function() {
 
     var header = document.getElementById("header");
-    if (header.className === "header standard") {
-        header.className = "header responsive";
-    } else {
-        header.className = "header standard";
-    }
+    header.classList.toggle("standard");
+    header.classList.toggle("responsive");
 
 };

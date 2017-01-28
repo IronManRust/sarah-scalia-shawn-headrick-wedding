@@ -150,6 +150,18 @@ a {
     text-align: center;
 }
 
+.header li a,
+.footer li a {
+    transition: 0.3s;
+    -moz-transition: 0.3s;
+    -webkit-transition: 0.3s;
+}
+
+.header li a:hover,
+.footer li a:hover {
+    background-color: #f1eff0;
+}
+
 @media screen and (max-width:1023px) {
 
     .header li:first-child {

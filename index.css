@@ -128,6 +128,18 @@ a {
     display: none;
 }
 
+.header li.selected {
+    height: 47px;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    border-bottom-color: #f1eff0;
+    border-bottom-style: solid;
+    border-bottom-width: 4px;
+}
+
+.footer li.selected {}
+
 .header li a,
 .footer li a,
 .footer li span {
@@ -139,6 +151,12 @@ a {
 }
 
 @media screen and (max-width:1023px) {
+
+    .header li:first-child {
+        border: none;
+    }
+
+    .footer li:first-child {}
 
     .header li:not(:first-child) {
         display: none;

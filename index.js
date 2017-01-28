@@ -26,6 +26,15 @@ window.addEventListener("load", function execute(event) {
 
 var showPage = function(name) {
 
+    var headerMenuItems = document.getElementsByClassName("header-menu-item");
+    for (i = 0; i < headerMenuItems.length; i++) {
+        if (headerMenuItems[i].id === ("header-menu-item-" + name)) {
+            headerMenuItems[i].classList.add("selected");
+        } else {
+            headerMenuItems[i].classList.remove("selected");
+        }
+    }
+
     var pages = document.getElementsByClassName("page");
     for (i = 0; i < pages.length; i++) {
         pages[i].style.display = (pages[i].id === "page-" + name) ? "block" : "none";

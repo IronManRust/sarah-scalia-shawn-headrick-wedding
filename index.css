@@ -191,6 +191,11 @@ a {
         display: inline-block;
     }
 
+    .header li a:hover,
+    .footer li a:hover {
+        background-color: #663e51;
+    }
+
     .header.responsive li {
         display: inline;
         float: none;

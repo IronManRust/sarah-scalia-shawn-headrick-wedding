@@ -400,6 +400,8 @@ a {
 }
 
 #page-welcome-hero {
+    border: 1px solid #000000;
+    border-radius: 5px;
     max-height: 50vh;
     max-width: 95vw;
 }
@@ -475,6 +477,8 @@ a {
 #page-photos-images li img {
     cursor: pointer;
     margin: auto;
+    border: 1px solid #000000;
+    border-radius: 5px;
     height: auto;
     width: 200px;
 }
@@ -494,6 +498,8 @@ a {
 .page-party-member p img {
     display: block;
     margin: auto;
+    border: 1px solid #000000;
+    border-radius: 5px;
     width: auto;
     max-width: 250px;
 }

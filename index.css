@@ -560,6 +560,38 @@ a {
 
 /* Page - Guests */
 
+.page-guests-row {
+    text-align: center;
+    padding: 15px;
+}
+
+.page-guests-item {
+    display: inline-block;
+    padding: 15px 20px 15px 20px;
+}
+
+.page-guests-item h2 img {
+    display: block;
+    margin: auto;
+    border: 1px solid #000000;
+    border-radius: 5px;
+    width: auto;
+    max-width: 250px;
+}
+
+.page-guests-item ul {
+    text-align: left;
+}
+
+.page-guests-link {
+    color: #4d2f3d;
+    font-weight: bold;
+}
+
+.page-guests-link:hover {
+    text-decoration: underline;
+}
+
 /* Page - Registry */
 
 /* Page - Contact */

@@ -596,6 +596,15 @@ a {
 
 /* Page - Contact */
 
+.page-contact-link {
+    color: #4d2f3d;
+    font-weight: bold;
+}
+
+.page-contact-link:hover {
+    text-decoration: underline;
+}
+
 #page-contact-disqus {
     margin-left: 15vw;
     margin-right: 15vw;

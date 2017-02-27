@@ -389,6 +389,34 @@ a {
     }
 }
 
+.page p span.footnote {
+    display: inline-block;
+    font-size: 14px;
+    text-align: justify;
+    margin-left: 50vw;
+    margin-right: 15vw;
+    height: auto;
+    width: auto;
+    border-top-color: #4d2f3d;
+    border-top-style: solid;
+    border-top-width: 1px;
+}
+
+@media screen and (max-width:880px) {
+    .page p span.footnote {
+        display: inline-block;
+        font-size: 14px;
+        text-align: justify;
+        margin-left: 40vw;
+        margin-right: 5vw;
+        height: auto;
+        width: auto;
+        border-top-color: #4d2f3d;
+        border-top-style: solid;
+        border-top-width: 1px;
+    }
+}
+
 /* Page - Welcome */
 
 #page-welcome-hero,
@@ -559,6 +587,12 @@ a {
 }
 
 /* Page - Guests */
+
+.page-guests-ordered-list {
+    text-align: justify;
+    margin-left: 15vw;
+    margin-right: 15vw;
+}
 
 .page-guests-row {
     text-align: center;

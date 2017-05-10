@@ -647,6 +647,15 @@ a {
     max-width: 250px;
 }
 
+.page-registry-link {
+    color: #4d2f3d;
+    font-weight: bold;
+}
+
+.page-registry-link:hover {
+    text-decoration: underline;
+}
+
 /* Page - Contact */
 
 .page-contact-link {
